@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="css3/bootstrap.min.css">
+    <script src="js2/jquery.min.js"></script>
+    <script src="js2/bootstrap.min.js"></script>
+    <script src="js2/jquery.dataTables.min.js"></script>
+    <script src="js2/dataTables.bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css3/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="css3/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css3/invoice.css">
+    <script src="js2/bootstrap-datepicker.js"></script>    
+  </head>
+      
+    
+    
+    <div class="container-fluid">
+        <br> 
+      <form method="post" id="invoice_form">
+<!--          <?php var_dump($_REQUEST); ?>-->
+        <div class="table-responsive">
+            <nav class="navbar navbar-default card">
+          <div class="container-fluid">
+            <div class="navbar-header" >
+              <a>Billing System</a>
+            </div>
+          </div>
+        </nav>
+          <table class="table table-bordered card">
+            
+            <tr>
+                <td colspan="2">
+                  </div>
+                  <br />
+                  <table id="invoice-item-table" class="table table-bordered table-hover table-striped">
+                    <tr>
+                      <th width="10%">S/N.</th>
+                      <th width="20%">Item Name</th>
+                      <th width="20%">Item Name</th>
+                      <th width="10%">Quantity</th>
+                      <th width="10%">Price($)</th>
+                      <th width="50%">Actual Amt.</th>
+                      
+                    </tr>
+
+                    <tr>
+                      <td><span id="sr_no">1</span></td>
+                      <td><input type="text" name="item_name[]" id="item_name1" class="form-control input-sm" /></td>
+                      <td><input type="text" name="item_name[]" id="item_name1" class="form-control input-sm" /></td>
+                     
+                      <td><input type="text" name="order_item_quantity[]" id="order_item_quantity1" data-srno="1" class="form-control input-sm order_item_quantity" /></td>
+                      <td><input type="text" name="order_item_price[]" id="order_item_price1" data-srno="1" class="form-control input-sm number_only order_item_price" /></td>
+                      <td><input type="text" name="order_item_actual_amount[]" id="order_item_actual_amount1" data-srno="1" class="form-control input-sm order_item_actual_amount" readonly /></td>
+                      <td><input type="text" name="order_item_final_amount[]" id="order_item_final_amount1" data-srno="1" readonly class="form-control input-sm order_item_final_amount" /></td>
+                      <td></td>
+                    </tr>
+                  </table>
+                  <div align="right">
+                    <button type="button" name="add_row" id="add_row" class="btn btn-success">+</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td align="right"><b>Total</b></td>
+                <td align="right"><b><span id="final_total_amt"></span></b></td>
+              </tr>
+
+          </table>
+        </div>
+      </form>
+      <script type="text/javascript" src="billing.js"></script>
+    </div>
+    <br>
+    
+  </body>
+</html>
